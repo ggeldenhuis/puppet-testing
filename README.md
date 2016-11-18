@@ -8,6 +8,12 @@ explain all the things that were unclear to me, and am hoping that this will
 get you on your way relatively easily. If you find anything unclear or blatantly
 wrong then please log a bug or submit a PR and I will get it fixed.
 
+# Methodology
+In an ideal world you would and should write a test for every possible value
+and resource to grace your puppet catalogue. In reality you won't have time, so
+a good compromise is to at the very least, write tests for things you think
+could go wrong. There after when ever you find a bug in your code, write a test for it, and next time you won't experience that bug again.
+
 # Stuff I will need
 ```
 gem install bundler
@@ -81,7 +87,18 @@ names rather than just a summary of what happened.
 
 
 # Who is Travis?
-Travis is friendly German who kindly tests your code on your behalf. 
+Travis is friendly German who kindly tests your code on your behalf. More to
+the point, travis-ci is a web based continuous integration platform headquarted
+in Berlin, Germany. They provide free but rate limited testing for any open source project, with strong integration with github. So basically if you have
+managed to get your rspec tests working you can very easily add travis-ci
+functionality. This will enable you to run your set of tests automatically every
+time you push code to your github repository. You can make it even more shiny
+by adding a link in your repo's readme that points to the build status. That
+way you can know if the latest push worked successfully and when you get PRs
+against your repo you can quickly see if the code checks without having to do
+anything.
+
+Travis Build Status: [![Build Status](https://travis-ci.org/ggeldenhuis/puppet-testing.svg?branch=master)](https://travis-ci.org/ggeldenhuis/puppet-testing)
 
 # Old and new
 You might see different ways to perform the same test when looking at other
@@ -98,3 +115,9 @@ reading [BetterSpecs](http://betterspecs.org)
 # Credits
 A special thanks to Craig Dunn who has kindly helped to untangle the world of
 puppet testing and patiently kept answering questions.
+
+# TODO
+* Modify testing class to take parameters
+* Write class test with parameters
+* Write test to test array variable
+* Write relationship tests
