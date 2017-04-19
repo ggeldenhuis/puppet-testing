@@ -116,6 +116,7 @@ reading [BetterSpecs](http://betterspecs.org)
 A special thanks to Craig Dunn who has kindly helped to untangle the world of
 puppet testing and patiently kept answering questions.
 
+
 # TODO
 * Modify testing class to take parameters
 * Write class test with parameters
