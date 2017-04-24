@@ -111,10 +111,27 @@ In the above case **is_expected** is the better/newer way of performing the test
 How are you supposed to know this, well a good place to start would be by
 reading [BetterSpecs](http://betterspecs.org)
 
+# beaker-rspec
+See [beaker source](https://github.com/puppetlabs/beaker-rspec) for more information.
+
+What is beaker? In short it is a puppet test harness and that is a number of libraries and routines that automates and makes it easier to do puppet testing. beaker-rspec is the link between beaker and rspec enabling us to write all of our testing code in a rspec fashion making it easier to comprehend and code.
+
+Since beaker-rspec also integrates serverspec it allows us to spin up virtual machines using vagrant, apply our puppet catalogues and test for the expected functionality of the software that we have automated with puppet.
+
+## Virtual machine specification
+The virtual machines that will be spinned up is in a file called ```default.yml``` which is the ```spec\acceptance\nodesets\``` directory. You can have other files within the ```nodesets``` directory but for the purposes of this tutorial we will stick with ```default.yml```.
+
+## Writing a basic spec
+Our first test should be located in the ```spec\acceptance``` directory. There can be multiple files with ideally descriptive names. If the filenames end in ```.rb``` then they will be processed. This repository contains a test called ```basic_spec.rb``` with detailed commentary about every part.
+
+## Linking all the parts together
+The file in ```spec``` called ```spec_helper_acceptance.rb``` This file will install puppet on the defined hosts, do the necessary configuration and also install any additional required puppet modules that would be needed for things to work.
+
+
 
 # Credits
 A special thanks to Craig Dunn who has kindly helped to untangle the world of
-puppet testing and patiently kept answering questions.
+puppet testing and patiently kept answering questions. James Park-Watt also deserves a mention for helping me get started with beaker-rspec and patiently helping to get my ruby environment working correctly.
 
 
 # TODO

@@ -1,4 +1,4 @@
 *.swp
 Gemfile.lock
 spec/fixtures/modules/*
-
+log/*
