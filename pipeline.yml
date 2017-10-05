@@ -11,4 +11,4 @@ jobs:
   plan:
   - get: puppet-testing
   - task: puppet-linting
-    file: ci/puppet-linting.yml
+    file: puppet-testing/ci/puppet-linting.yml

@@ -6,5 +6,4 @@ image_resource:
   source: {repository: busybox}
 
 run:
-  path: echo
-  args: [hello world, doing puppet linting]
+  path: puppet-testing/ci/puppet-linting.sh
