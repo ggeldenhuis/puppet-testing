@@ -7,5 +7,4 @@ image_resource:
 
 run:
 #  path: puppet-testing/ci/puppet-linting.sh
-  path: 'ls'
-  args: ['/ -al']
+  path: 'pwd'
