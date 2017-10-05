@@ -1,0 +1,14 @@
+---
+resources:
+- name: puppet-testing
+  type: git
+  source:
+    uri: https://github.com/ggeldenhuis/puppet-testing.git
+
+jobs:
+- name: puppet-linting
+  public: true
+  plan:
+  - get: puppet-testing
+  - task: puppet-linting
+    file: ci/puppet-linting.yml
