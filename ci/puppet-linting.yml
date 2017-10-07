@@ -9,4 +9,4 @@ outputs:
 - name: puppet-linting
 
 run:
-  path: puppet-linting-resource/ci/puppet-linting.sh
+  path: puppet-linting/ci/puppet-linting.sh
