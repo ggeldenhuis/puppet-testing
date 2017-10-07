@@ -9,4 +9,4 @@ image_resource:
 #- name: puppet-linting
 
 run:
-  path: puppet-linting.sh
+  path: puppet-linting-resource/ci/puppet-linting.sh
