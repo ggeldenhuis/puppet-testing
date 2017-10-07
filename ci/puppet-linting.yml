@@ -6,5 +6,4 @@ image_resource:
   source: {repository: busybox}
 
 run:
-#  path: puppet-testing/ci/puppet-linting.sh
-  path: 'pwd'
+  path: ci/puppet-linting.sh
