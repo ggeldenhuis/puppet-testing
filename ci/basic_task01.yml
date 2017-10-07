@@ -6,4 +6,5 @@ image_resource:
   source: {repository: ubuntu, tag: "14.04"}
 
 run:
-  path: pwd
+  path: ls
+  args: [-lh]
