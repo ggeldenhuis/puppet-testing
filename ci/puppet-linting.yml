@@ -5,8 +5,8 @@ image_resource:
   type: docker-image
   source: {repository: busybox}
 
-#outputs:
-#- name: puppet-linting
+outputs:
+- name: puppet-linting
 
 run:
   path: puppet-linting-resource/ci/puppet-linting.sh
